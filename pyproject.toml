@@ -1,0 +1,43 @@
+[tool.black]
+line-length = 120
+target-version = ['py311']
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | venv
+  | env
+  | .git
+  | __pycache__
+  | allure-results
+  | allure-report
+  | .pytest_cache
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 120
+skip = [
+    "venv",
+    ".venv",
+    "env",
+    ".git",
+    "__pycache__",
+    "allure-results",
+    "allure-report",
+    ".pytest_cache",
+]
+
+[tool.flake8]
+max-line-length = 120
+exclude = [
+    "venv",
+    ".venv",
+    "env",
+    ".git",
+    "__pycache__",
+    "allure-results",
+    "allure-report",
+    ".pytest_cache",
+]
